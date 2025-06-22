@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Songsterr Popup Blocker",
+  "version": "1.0",
+  "description": "Blocks popups and overlays on Songsterr.",
+  "permissions": ["scripting"],
+  "host_permissions": ["*://www.songsterr.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.songsterr.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
